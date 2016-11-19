@@ -15,6 +15,6 @@
 5. 在/usr/local/redis3.2下建立etc和bin文件夹，用来存放配置文件和命令
 6. 把src下边的mkreleasehdr.sh redis-benchmark redis-check-aof redis-check-dump redis-cli redis-server移动至bin下
 7. 把redis.conf移动到/etc目录下
-8. 启动时，要使用后台启动配置redis.conf中的daemonize为yes，使用./redis-server ***/redis.conf进行启动redis服务器
+8. 启动时，要使用后台启动配置redis.conf中的daemonize为yes，使用./redis-server ***/redis.conf进行启动redis服务器，一定要修改redis.conf修改复杂登录密码，因为性能太高，可以尝试破解非常快。
 9. 关闭所有redis可以使用pkill redis-server杀死本机所有redis服务
 
