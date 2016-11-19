@@ -57,6 +57,18 @@
 10. zcard 返回集合所有元素个数
 11. zcount 返回集合中指定区间的数量
 
+#### 其他命令
+1. expire key 时间，设置超时时间
+2. ttl key 查看剩余时间
+3. persist 取消过期时间
+4. select 选择数据库
+5. randomkey 随机返回key
+6. rename 重命名key
+7. move key 将key从一个数据库移动到另外的数据库
+8. dbsize 数据库中key数量
+9. info 获取数据库信息
+10. config get 某个参数，获取相关的配置信息 get * 获取所有
+11. flushdb 清空当前数据库，flushall 清空所有数据库
 
 
 
