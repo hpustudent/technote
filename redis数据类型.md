@@ -69,6 +69,7 @@
 9. info 获取数据库信息
 10. config get 某个参数，获取相关的配置信息 get * 获取所有
 11. flushdb 清空当前数据库，flushall 清空所有数据库
+12. 删除某个键 del key即可
 
 
 
