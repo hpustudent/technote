@@ -1,5 +1,6 @@
 ### 主从
- 在redis.conf 中修改 # slaveof <masterip> <masterport>,配置master ip和端口即可
+ 在redis.conf 中修改 # slaveof <masterip> <masterport>,配置master ip和端口
+ # masterauth <master-password> 配置master的密码
 
 ### 哨兵
 1. 监控，不断检查主从是否正常
