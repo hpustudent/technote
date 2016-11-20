@@ -39,4 +39,4 @@
     3. 安装后，执行./redis-trib.rb脚本查看是否有错，如果提示redis没有安装，要使用gem install redis 安装ruby的redis模块
     4. ruby安装好后，执行./redis-trib.rb create --replicas 1 **.**.**.** port1 **.**.**.** port2 **.**.**.** port3 **.**.**.** port4 **.**.**.** port5 **.**.**.** port6 创建集群，--replicas 1代表1主从比例，这里设置为1，表示一主一从， 1：1
     5.  执行后给出提示 >>> Creating cluster....[OK] All 16384 slots covered.集群就创建成功了
-10. 进入客户端命令行后，输入cluster nodes，查看集群状况    
+10. 使用redis-cli -c -h **.**.**.** -p ** 指定-c选项进入集群中，执行客户端命令行后，输入cluster nodes，查看集群状况    
