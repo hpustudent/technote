@@ -18,9 +18,9 @@
 3. 在zookeeper安装目录的conf目录下，复制zoo_sample.cfg 命名为zoo.cfg
 4. 编辑zoo.cfg，修改dataDir目录到安装目录下自定义目录中，用以存放数据
 5. 配置通信端口
-    server.0=*.*.*.*:3000:3999 (server.serverid=ip地址：FL通信端口：选举端口)
-    server.1=*.*.*.*:3000:3999
-    server.2=*.*.*.*:3000:3999
+        server.0=*.*.*.*:3000:3999 (server.serverid=ip地址：FL通信端口：选举端口)  
+        server.1=*.*.*.*:3000:3999  
+        server.2=*.*.*.*:3000:3999  
 6. 配置服务器标示
   在dataDir所指定的目录中，创建节点标识文件myid,写入serverid到文件中
 7. 使用zkServer.sh start 启动zookeeper
