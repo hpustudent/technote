@@ -29,6 +29,5 @@
                           .retryPolicy(retryPolicy)
                           .build();
 
-这里重试策略一般选择ExponentialBackoffRetry，指定初次连接时间和重试次数，这种策略重试间隔是分散的不是固定的。
-
+这里重试策略一般选择ExponentialBackoffRetry，指定初次连接时间和重试次数，这种策略重试间隔是分散的不是固定的。  
 3. 
