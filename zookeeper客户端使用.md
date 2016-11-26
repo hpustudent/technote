@@ -5,6 +5,7 @@
 4. 获取节点的值：get + 路径
 5. 设置节点的值：set + 路径 + 值
 6. 递归删除节点：rmr + 路径
+
 ### apache cautor使用
 1. 引入curator依赖，引入下边的依赖，会自动依赖client、zookeeper、framework
 
