@@ -6,22 +6,28 @@
 5. 设置节点的值：set + 路径 + 值
 6. 递归删除节点：rmr + 路径
 ### apache cautor使用
-1. 引入curator依赖  
+1. 引入curator依赖，引入下边的依赖，会自动依赖client、zookeeper、framework
 
-              <dependency>
-                  <groupId>org.apache.curator</groupId>
-                  <artifactId>curator-client</artifactId>
-                  <version>3.2.1</version>
-              </dependency>
+         <dependency>
+          <groupId>org.apache.curator</groupId>
+          <artifactId>curator-recipes</artifactId>
+          <version>2.11.1</version>
+          <exclusions>
+              <exclusion>
+                  <groupId>org.slf4j</groupId>
+                  <artifactId>slf4j-api</artifactId>
+              </exclusion>
+          </exclusions>
+      </dependency>
+2. 创建客户端使用CuratorFrameworkFactory.builder()方法，将返回一个构造者对象，传入，连接字符串、超时时间，重试策略可以构造一个CuratorFramework  
+对象：
 
-              <dependency>
-                  <groupId>org.apache.curator</groupId>
-                  <artifactId>curator-framework</artifactId>
-                  <version>3.2.1</version>
-              </dependency>
+          CuratorFramework curatorFramework = CuratorFrameworkFactory.builder()
+                          .connectString(CONNECTADDR)
+                          .sessionTimeoutMs(SESSIONTIMEOUT)
+                          .retryPolicy(retryPolicy)
+                          .build();
 
-              <dependency>
-                  <groupId>org.apache.curator</groupId>
-                  <artifactId>curator-recipes</artifactId>
-                  <version>3.2.1</version>
-              </dependency>
+这里重试策略一般选择ExponentialBackoffRetry，指定初次连接时间和重试次数，这种策略重试间隔是分散的不是固定的。
+
+3. 
