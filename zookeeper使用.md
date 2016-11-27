@@ -11,6 +11,7 @@
 
 ### 应用
 配置的管理，日志搜集，分布式锁，集群的管理，发布订阅，数据库切换
+![应用场景](http://www.cnblogs.com/leesf456/p/6036548.html)
 
 ### 安装
 1. wget -c http://mirror.bit.edu.cn/apache/zookeeper/stable/zookeeper-3.4.9.tar.gz 下载安装包
