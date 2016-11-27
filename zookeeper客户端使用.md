@@ -38,4 +38,5 @@
 7. 节点取值getData
 8. watcher的监听，使用NodeCacheListener和PathChildrenCacheListener实现监听节点或子节点的变化
 9. 监控zookeeper使用Taokeeper
+10. [zookeeper集群的迁移工作](http://itindex.net/detail/53592-zookeeper-%E7%BB%8F%E9%AA%8C)
 
