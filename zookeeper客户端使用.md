@@ -32,11 +32,11 @@
 这里重试策略一般选择ExponentialBackoffRetry，指定初次连接时间和重试次数，这种策略重试间隔是分散的不是固定的。  
 3. 节点创建(withAcl做验证身份用)
 `curatorFramework.create().withAcl().creatingParentsIfNeeded().withMode(CreateMode.PERSISTENT).forPath("***", bytes);`
-4. 节点删除delete
-5. 节点修改setData
-6. 节点查找checkExists
-7. 节点取值getData
-8. watcher的监听，使用NodeCacheListener和PathChildrenCacheListener实现监听节点或子节点的变化
-9. 监控zookeeper使用Taokeeper
-10. [zookeeper集群的迁移工作](http://itindex.net/detail/53592-zookeeper-%E7%BB%8F%E9%AA%8C)
+4. 节点删除delete  
+5. 节点修改setData  
+6. 节点查找checkExists  
+7. 节点取值getData  
+8. watcher的监听，使用NodeCacheListener和PathChildrenCacheListener实现监听节点或子节点的变化  
+9. 监控zookeeper使用Taokeeper  
+10. [zookeeper集群的迁移工作](http://itindex.net/detail/53592-zookeeper-%E7%BB%8F%E9%AA%8C)  
 
