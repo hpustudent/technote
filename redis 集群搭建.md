@@ -44,6 +44,6 @@
       - config set requirepass abc  
       - config rewrite  
       
-10. 使用redis-cli -c -h **.**.**.** -p ** 指定-c选项进入集群中，执行客户端命令行后，输入cluster nodes，查看集群状况 ，输入cluster info 查看集群信息 
+10. 使用redis-cli -c -h **.**.**.** -p ** 指定-c选项进入集群中，执行客户端命令行后，输入cluster nodes，查看集群状况 ，输入cluster info 查看集群信息，有密码时指定-a，-p是指定的端口
 11. 添加redis节点，./redis-trib.rb add-node 指定新ip:port 指定已存在集群的某个ip:port,加入集群
 12. 加入后需要重新分片 使用./redis-trib.rb reshard ip:port
