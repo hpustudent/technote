@@ -18,6 +18,6 @@
 8. 启动时，要使用后台启动配置redis.conf中的daemonize为yes，使用./redis-server ***/redis.conf进行启动redis服务器，一定要修改redis.conf修改复杂登录密码，因为性能太高，可以尝试破解非常快。
 9. 关闭所有redis可以使用pkill redis-server杀死本机所有redis服务
 
-10. 将redis加入开机自启动 wget https://github.com/ijonas/dotfiles/raw/master/etc/init.d/redis-server
-    sudo mv redis-server /etc/init.d/redis-server
-    sudo chmod +x /etc/init.d/redis-server
+10. 将redis加入开机自启动 wget https://github.com/ijonas/dotfiles/raw/master/etc/init.d/redis-server  
+    sudo mv redis-server /etc/init.d/redis-server  
+    sudo chmod +x /etc/init.d/redis-server  
