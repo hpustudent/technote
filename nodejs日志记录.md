@@ -25,4 +25,4 @@
 
 4. 请求状态和其他的内容，morgan自带的有，可以直接使用，综上，添加中间件
 
-        app.use(logger('[:TIME] :status :IPREGION ":method :url HTTP/:http-version" ":referrer" ":user-agent"'));
+        app.use(logger('[:TIME] :status :IPREGION ":method :url HTTP/:http-version :response-time ms" ":referrer" ":user-agent"'));
