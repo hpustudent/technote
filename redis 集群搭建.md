@@ -37,7 +37,7 @@
     1. ruby -v 查看ruby是否安装如果没有
     2. apt-get install ruby进行安装ruby
     3. 安装后，执行./redis-trib.rb脚本查看是否有错，如果提示redis没有安装，要使用gem install redis 安装ruby的redis模块
-    4. ruby安装好后，执行./redis-trib.rb create --replicas 1 **.**.**.** port1 **.**.**.** port2 **.**.**.** port3 **.**.**.** port4 **.**.**.** port5 **.**.**.** port6 创建集群，--replicas 1代表1主从比例，这里设置为1，表示一主一从， 1：1
+    4. ruby安装好后，执行./redis-trib.rb create --replicas 1 你的ip1 port1 你的ip2 port2 你的ip3 port3 你的ip4 port4 你的ip5 port5 你的ip6 port6 创建集群，--replicas 1代表1主从比例，这里设置为1，表示一主一从， 1：1
     5.  执行后给出提示 >>> Creating cluster....[OK] All 16384 slots covered.集群就创建成功了
     6. 若需要授权配置成功后使用  
       - config set masterauth abc  
