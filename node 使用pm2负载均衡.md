@@ -4,3 +4,4 @@
 3. pm2 stop ... 停止运行进程
 4. pm2 monit 查看监控信息
 5. pm2 delete all 删除所有，delete + id number删除指定id
+6. pm2 flush 更新代码后必须使用这个命令刷新，否则加载错误
