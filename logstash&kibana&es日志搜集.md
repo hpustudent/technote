@@ -3,6 +3,9 @@
     export JAVA_HOME=/usr/local/jdk1.8.0_111  
     export PATH=$JAVA_HOME/bin:$PATH  
     执行source /etc/profile使配置的环境变量生效
+    
+    因为安装的logstash默认使用java的路径是`/usr/bin/java`，所以需要创建软连接 `ln -s /usr/local/jdk1.8.0_111/bin/java /usr/bin/java`
+    
 3. 下载logstash公共密钥
 `rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch`
 4. 在/etc/yum.repos.d/目录添加logstash.repo文件，输入内容
