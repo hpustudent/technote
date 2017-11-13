@@ -4,6 +4,13 @@
 ### 安装es
 1. 下载安装包 `wget -c https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.4.tar.gz`
 2. 解压 `tar -zxvf elasticsearch-5.6.4.tar.gz`
+
+        2.1 由于es不能使用root下启动，需要创建用户组和添加用户
+        2.2 `groupadd es`创建用户组
+        2.3 `useradd es -g es -p 123456`创建用户es并加入组es，设置密码
+        2.4 `chown -R es:es elasticsearch-5.6.4/`将目录下所有内容改变为es组es用户
+        2.5 `su es`切换为es用户，在执行下边的命令
+
 3. 运行 `bin/elasticsearch` 即可启动es
 4. 由于elasticsearch 命令自带的不包含停止等命令，所以可以安装servicewrapper插件解决，通过`https://github.com/elasticsearch/elasticsearch-servicewrapper/archive/master.zip`下载解压后，将service文件夹放到elasticsearch的bin目录下
 5. 配置servicewrapper，在service目录下找到elasticsearch.conf文件，配置前两行：`ES_HOME`及`ES_HEAP_SIZE`
