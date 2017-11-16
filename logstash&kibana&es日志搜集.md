@@ -17,3 +17,6 @@
 6. 接下来就可以使用`bin/service/elasticsearch start | stop | restart | install | remove | console | condrestart | status`控制es的状态了
 7. 启动成功后，使用`curl http://localhost:9200/`测试服务是否正常
 
+### 集群配置
+1. es目录下的config目录中有`elasticsearch.yml`文件,主要用于对集群、节点、索引以及持久化和集群发现机制等进行参数设置
+
