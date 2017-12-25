@@ -53,5 +53,5 @@ root用户下vi /etc/sysctl.conf 添加如下：
         discovery.zen.ping.unicast.hosts: ["11.11.11.11"] //各个服务器地址，多写几个万一某一个节点不在了呢，单播部署在局域网内部
         discovery.zen.minimum_master_nodes:  //选择主节点过程中最少的节点数，节点数/2+1
         discovery.zen.ping.timeout: 5s //节点通信超时时间
-        bootstrap.memory_lock=true //避免将内存数据交换到硬盘上，因为太耗时，可能会使GC时间变长
+        bootstrap.memory_lock=true //避免将内存数据交换到硬盘上，因为太耗时，可能会使GC时间变长
 
