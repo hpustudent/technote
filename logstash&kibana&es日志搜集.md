@@ -50,7 +50,7 @@ root用户下vi /etc/sysctl.conf 添加如下：
        
         discovery.zen.ping.unicast.hosts: ["11.11.11.11"] //各个服务器地址，多写几个万一某一个节点不在了呢，单播部署在局域网内部
         discovery.zen.minimum_master_nodes:  //选择主节点过程中最少的节点数，节点数/2+1
-        discovery.zen.ping.timeout: 5s //节点通信超时时间
+        discovery.zen.ping_timeout: 5s //节点通信超时时间
         node.master: true //设置节点为主节点
         node.data: true //设置节点为数据节点
         
