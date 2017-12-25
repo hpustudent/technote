@@ -25,7 +25,13 @@ root用户下vi /etc/security/limits.conf，添加如下：
         root soft nofile 65536(ubuntu中需要设置)
         root hard nofile 65536(ubuntu中需要设置)
         
-修改后如果要生效，需要重新登录，不用重启电脑，在ubuntu中，
+修改后如果要生效，需要重新登录，不用重启电脑
+
+错误2：max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+root用户下vi /etc/sysctl.conf 添加如下：
+
+        vm.max_map_count=262144
+
 
 ### 集群配置
 1. es目录下的config目录中有`elasticsearch.yml`文件,主要用于对集群、节点、索引以及持久化和集群发现机制等进行参数设置
