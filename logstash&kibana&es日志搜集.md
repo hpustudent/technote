@@ -24,6 +24,8 @@ root用户下vi /etc/security/limits.conf，添加如下：
         * hard nofile 65536
         root soft nofile 65536(ubuntu中需要设置)
         root hard nofile 65536(ubuntu中需要设置)
+        es hard memlock unlimited(如果需要锁定内存必须设置)
+        es soft memlock unlimited(如果需要锁定内存必须设置)
         
 修改后如果要生效，需要重新登录，不用重启电脑
 
