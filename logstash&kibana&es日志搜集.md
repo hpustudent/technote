@@ -34,6 +34,10 @@ root用户下vi /etc/sysctl.conf 添加如下：
 
 修改后使用命令` sysctl -p` 重新加载配置即可
 
+### 查询状态接口
+1. http://192.168.56.111:9200/_cluster/health   查询集群健康状态
+2. 
+
 ### 集群配置
 1. es目录下的config目录中有`elasticsearch.yml`文件,主要用于对集群、节点、索引以及持久化和集群发现机制等进行参数设置
 
