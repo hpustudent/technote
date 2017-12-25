@@ -17,6 +17,16 @@
 6. 接下来就可以使用`bin/service/elasticsearch start | stop | restart | install | remove | console | condrestart | status`控制es的状态了
 7. 启动成功后，使用`curl http://localhost:9200/`测试服务是否正常
 
+错误1：max file descriptors [4096] for elasticsearch process is too low, increase to at least [65536]
+root用户下vi /etc/security/limits.conf，添加如下：
+
+        * soft nofile 65536
+        * hard nofile 65536
+        root soft nofile 65536(ubuntu中需要设置)
+        root hard nofile 65536(ubuntu中需要设置)
+        
+修改后如果要生效，需要重新登录，不用重启电脑，在ubuntu中，
+
 ### 集群配置
 1. es目录下的config目录中有`elasticsearch.yml`文件,主要用于对集群、节点、索引以及持久化和集群发现机制等进行参数设置
 
