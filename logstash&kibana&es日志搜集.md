@@ -36,8 +36,21 @@ root用户下vi /etc/sysctl.conf 添加如下：
 
 ### 查询状态接口
 1. http://192.168.56.111:9200/_cluster/health   查询集群健康状态
-2. 
+2. http://192.168.56.111:9200 查看节点信息
+3. http://192.168.56.111:9200/_cat/nodes?v 查看节点列表
 
 ### 集群配置
 1. es目录下的config目录中有`elasticsearch.yml`文件,主要用于对集群、节点、索引以及持久化和集群发现机制等进行参数设置
+
+cluster.name: YourClusterName //相同集群名在多播模式下自动加入统一集群
+node.name: YourNodeName //区分节点，统一集群下节点名需要唯一
+network.host: 192.168.1.11 //当前节点绑定地址
+http.port: 9200 //http绑定的端口
+node.master: true //设置节点为主节点
+node.data: true //设置节点为数据节点
+http.cors.enabled: true //允许跨域请求
+http.cors.allow-origin: * //设置跨域REST来自何处，*代表所有
+discovery.zen.ping.unicast.hosts: ["11.11.11.11"] //各个服务器地址，多写几个万一某一个节点不在了呢，单播部署在局域网内部
+discovery.zen.minimum_master_nodes:  //选择主节点过程中最少的节点数，节点数/2+1
+discovery.zen.ping.timeout: 5s //节点通信超时时间
 
