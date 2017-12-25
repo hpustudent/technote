@@ -32,6 +32,7 @@ root用户下vi /etc/sysctl.conf 添加如下：
 
         vm.max_map_count=262144
 
+修改后使用命令` sysctl -p` 重新加载配置即可
 
 ### 集群配置
 1. es目录下的config目录中有`elasticsearch.yml`文件,主要用于对集群、节点、索引以及持久化和集群发现机制等进行参数设置
