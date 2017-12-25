@@ -55,4 +55,4 @@ root用户下vi /etc/sysctl.conf 添加如下：
         node.data: true //设置节点为数据节点
         
         http.cors.enabled: true //允许跨域请求
-        http.cors.allow-origin: * //设置跨域REST来自何处，*代表所有
+        http.cors.allow-origin: "*" //设置跨域REST来自何处，*代表所有
