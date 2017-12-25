@@ -17,7 +17,7 @@
 6. 接下来就可以使用`bin/service/elasticsearch start | stop | restart | install | remove | console | condrestart | status`控制es的状态了
 7. 启动成功后，使用`curl http://localhost:9200/`测试服务是否正常
 
-错误1：max file descriptors [4096] for elasticsearch process is too low, increase to at least [65536]
+#### 错误1：max file descriptors [4096] for elasticsearch process is too low, increase to at least [65536]
 root用户下vi /etc/security/limits.conf，添加如下：
 
         * soft nofile 65536
@@ -27,7 +27,7 @@ root用户下vi /etc/security/limits.conf，添加如下：
         
 修改后如果要生效，需要重新登录，不用重启电脑
 
-错误2：max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+#### 错误2：max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
 root用户下vi /etc/sysctl.conf 添加如下：
 
         vm.max_map_count=262144
