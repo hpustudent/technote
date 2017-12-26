@@ -58,3 +58,6 @@ root用户下vi /etc/sysctl.conf 添加如下：
         
         http.cors.enabled: true //允许跨域请求
         http.cors.allow-origin: "*" //设置跨域REST来自何处，*代表所有
+
+### 安装kibana
+1. 下载安装包 wget -c https://artifacts.elastic.co/downloads/kibana/kibana-5.6.4-linux-x86_64.tar.gz
