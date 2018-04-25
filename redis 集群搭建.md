@@ -24,13 +24,13 @@
 3. 指定节点超时 cluster-node-timeout ***
 
 4. 指定pid, pidfile /var/run/redis_*.pid
-5. 如果不用监控程序，则配置daemonize yes
+5. 如果不用监控程序，则配置daemonize yes，修改logfile文件位置，报错时有log可以参考
 
 4. 修改各个端口号，port ****
 5. 修改bind服务器ip bind **.**.**.**
 
 6. 指定数据文件存放目录，dir /usr/local/***/****
-7. 开启aof  appendonly yes由于是集群所以不需要alaway，默认的就可以
+7. 开启aof  appendonly yes由于是集群所以不需要alaway，默认的就可以, 修改allkeys-lru allkeys-lru 以免系统内存不足
 
 8. 使用redis-server /usr/local/***/***.conf 启动各个redis服务器
 9. 使用redis-trib.rb 脚本的create命令创建集群，由于这个脚本是ruby脚本，需要先做一下
