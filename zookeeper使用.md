@@ -26,3 +26,4 @@
   在dataDir所指定的目录中，创建节点标识文件myid,写入serverid到文件中
 7. 使用zkServer.sh start 启动zookeeper
 8. 使用zkServer.sh status 查看状态（需要关闭防火墙服务，service iptables stop）
+9. 在使用monit启动时候，提示找不到java，需要在bin目录下的zkEnv.sh添加环境变量JAVA_HOME="/usr/java/jdk1.8.0_172"
