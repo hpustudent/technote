@@ -49,3 +49,5 @@
 12. 加入后需要重新分片 使用./redis-trib.rb reshard ip:port
 
 [http://blog.csdn.net/qq_37595946/article/details/77800147]! redis安装出错解决
+
+13. 遇到错误'Asynchronous AOF fsync is taking too long (disk is busy?). Writing the AOF buffer without waiting for fsync to complete, this may slow down Redis.'的处理：`echo "vm.dirty_bytes=33554432" >> /etc/sysctl.conf` 执行`sysctl -p`使配置生效
