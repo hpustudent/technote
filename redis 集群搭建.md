@@ -53,3 +53,5 @@
 13. 遇到错误'Asynchronous AOF fsync is taking too long (disk is busy?). Writing the AOF buffer without waiting for fsync to complete, this may slow down Redis.'的处理：`echo "vm.dirty_bytes=33554432" >> /etc/sysctl.conf` 执行`sysctl -p`使配置生效
 
 14. 遇到错误'WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.' 使用`echo 'vm.overcommit_memory=1' >> /etc/sysctl.conf` 设置允许程序分配所有本机物理内存，执行`sysctl -p`生效
+
+15.  MISCONF Redis is configured to save RDB snapshots,but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.，使用`config set stop-writes-on-bgsave-error no` 即可
