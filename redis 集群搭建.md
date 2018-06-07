@@ -51,3 +51,5 @@
 [http://blog.csdn.net/qq_37595946/article/details/77800147]! redis安装出错解决
 
 13. 遇到错误'Asynchronous AOF fsync is taking too long (disk is busy?). Writing the AOF buffer without waiting for fsync to complete, this may slow down Redis.'的处理：`echo "vm.dirty_bytes=33554432" >> /etc/sysctl.conf` 执行`sysctl -p`使配置生效
+
+14. 遇到错误'WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.' 使用`echo 'vm.overcommit_memory=1' >> /etc/sysctl.conf` 设置允许程序分配所有本机物理内存，执行`sysctl -p`生效
