@@ -1,0 +1,1 @@
+~/.gradle/gradle.properties里面找到了proxy设置代码，删掉就好了
