@@ -58,4 +58,17 @@ process.env.NODE_ENV的值就为development，同样的mode为production也会�
       test: /\.css$/, use:['style-loader', 'css-loader']
     }
 
-           
+12、webpack使用热更新，在package.json中，修改scripts，添加`"dev":"webpack-dev-server --open"`,并在在webpack.config中把mode改为
+development，而且需要在webpack.config中配置plugin
+
+    plugins: [new webpack.HotModuleReplacementPlugin()],
+    devServer: {
+        contentBase: './dist',
+        hot:true
+    },
+    mode: 'development'
+    
+13、webpack生成资源指纹
+1）对于js文件
+2）对于css文件
+3）对于图片等其他资源文件
