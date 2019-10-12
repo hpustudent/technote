@@ -52,6 +52,10 @@ process.env.NODE_ENV的值就为development，同样的mode为production也会�
       ]
     }
 
-11、webpack解析css，css-loader
+11、webpack解析css，css-loader用来加载css文件并且转换成commonjs对象，style-loader将样式通过style标签插入到head中`npm i css-loader style-loader --save-dev`,这里要先写style-loader后写css-loader，执行顺序是从右到左的否则会有问题
+
+    {
+      test: /\.css$/, use:['style-loader', 'css-loader']
+    }
 
            
