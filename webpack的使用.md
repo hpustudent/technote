@@ -68,7 +68,9 @@ development，而且需要在webpack.config中配置plugin
     },
     mode: 'development'
     
-13、webpack生成资源指纹
-1）对于js文件
-2）对于css文件
-3）对于图片等其他资源文件
+13、webpack生成资源指纹,指纹只能在发布版时才可以使用，配置package.json的scripts脚本  
+
+    "build": "webpack --config webpack.pro.js",
+    "dev":"webpack-dev-server --config webpack.dev.js --open"
+
+14、webpack 对css压缩
