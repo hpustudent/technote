@@ -73,4 +73,16 @@ development，而且需要在webpack.config中配置plugin
     "build": "webpack --config webpack.pro.js",
     "dev":"webpack-dev-server --config webpack.dev.js --open"
 
-14、webpack 对css压缩
+14、webpack 对不同机型分辨率的转换，使用rem相对单位，`px2rem-loader`可以将px自动转换为rem
+
+        {
+            loader:"px2rem-loader",
+            options:{
+                remUnit:75, //一个rem=75px
+                remPrecision:8
+            }
+        }
+        
+然后使用阿里的lib-flexible 自动计算根元素宽度  
+
+15、
