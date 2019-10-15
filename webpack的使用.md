@@ -85,4 +85,7 @@ development，而且需要在webpack.config中配置plugin
         
 然后使用阿里的lib-flexible 自动计算根元素宽度  
 
-15、
+15、将资源内联到代码中，使用raw-loader,`npm i raw-loader@0.5.1 -D`  
+
+16、多页面打包
+
