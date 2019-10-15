@@ -99,4 +99,39 @@ development，而且需要在webpack.config中配置plugin
             index.html
             index.js
             index.css
+    
+然后使用`npm i glob@7.1.4 -D`安装glob,最后将获取到的plugin配置进去`plugins: [new CleanWebpackPlugin()].concat(htmlWebpackPlugins)`
+
+    const setMPA = () => {
+        const entry = {};
+        const htmlWebpackPlugins = [];
+
+        const entryFiles = glob.sync(path.join(__dirname, './src/*/index.js'))
+
+        for(let entryFile of entryFiles){
+            //正则提取出name
+            const pageName = entryFile.match(/src\/(.*)\/index\.js/)[1];
+            entry[pageName] = entryFile;
+
+            htmlWebpackPlugins.push(new HtmlWebpackPlugin({
+                template: path.join(__dirname, `src/${pageName}/index.html`),
+                filename: `${pageName}.html`,
+                chunks:[pageName],
+                inject:true,
+                minify:{
+                    html5:true,
+                    collapseWhitespace:true,
+                    preserveLineBreaks:false,
+                    minifyCSS:true,
+                    minifyJS:true,
+                    removeComments:false
+                }
+            }))
+        }
+
+        return {
+            entry,
+            htmlWebpackPlugins
+        }
+    }
 
