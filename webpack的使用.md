@@ -87,5 +87,16 @@ development，而且需要在webpack.config中配置plugin
 
 15、将资源内联到代码中，使用raw-loader,`npm i raw-loader@0.5.1 -D`  
 
-16、多页面打包
+16、多页面打包，将每个页面以及资源都用文件夹进行分类，每个文件夹内部的文件命名及结构统一
+
+    src
+        index
+            index.html
+            index.js
+            index.css
+
+        news
+            index.html
+            index.js
+            index.css
 
