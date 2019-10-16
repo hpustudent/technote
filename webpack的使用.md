@@ -135,3 +135,9 @@ development，而且需要在webpack.config中配置plugin
         }
     }
 
+17、使用`npm i friendly-errors-webpack-plugin -D`优化日志.
+
+    plugins: [new FriendlyErrorsWebpackPlugin()],
+    stats: 'errors-only',
+    
+
