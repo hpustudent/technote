@@ -5,7 +5,7 @@
 4. pm2 monit 查看监控信息
 5. pm2 delete all 删除所有，delete + id number删除指定id
 6. pm2 flush 更新代码后必须使用这个命令刷新，否则加载错误
-7. pm2 开机自启动
+7. pm2 开机自启动  
 （1） pm2 save 保存当前状态  
 （2）pm2 startup 生成命令  
-（3）将生成命令在控制台执行 
+（3）systemctl enable pm2-root,启用开机自动启动    
