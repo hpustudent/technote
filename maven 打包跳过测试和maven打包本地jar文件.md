@@ -29,3 +29,12 @@
             <scope>system</scope>
             <systemPath>${basedir}/lib/abc-sdk.jar</systemPath>
         </dependency>
+
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <includeSystemScope>true</includeSystemScope>
+            </configuration>
+        </plugin>
+
