@@ -18,3 +18,14 @@
                 </archive>
             </configuration>
         </plugin>
+
+
+当jar包比较少的时候，可以在依赖中添加jar包
+
+        <dependency>
+            <groupId>com.aaa</groupId>
+            <artifactId>abc-sdk</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/abc-sdk.jar</systemPath>
+        </dependency>
