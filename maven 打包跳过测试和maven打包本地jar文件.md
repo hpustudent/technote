@@ -33,6 +33,7 @@
         <plugin>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
+            <!-- 项目打成jar时将本地jar打进去 -->
             <configuration>
                 <includeSystemScope>true</includeSystemScope>
             </configuration>
