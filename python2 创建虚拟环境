@@ -1,0 +1,3 @@
+1. 安装兼容python2 的虚拟环境组件`pip install virtualenv==16.7.12`
+2. 指定python版本 `virtualenv -p /usr/bin/python2.7 venv`
+3. 激活虚拟环境 `source venv/bin/activate`
